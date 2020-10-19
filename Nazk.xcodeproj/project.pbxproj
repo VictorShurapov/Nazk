@@ -17,6 +17,9 @@
 		7EBEE4082539D0C20057582C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBEE4072539D0C20057582C /* Main.storyboard */; };
 		7EE67A4B253C6D8B00513D9D /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE67A49253C6D8B00513D9D /* EmptyTableViewCell.swift */; };
 		7EE67A4C253C6D8B00513D9D /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE67A4A253C6D8B00513D9D /* EmptyTableViewCell.xib */; };
+		7EE67A54253CE30A00513D9D /* DeclarationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE67A53253CE30A00513D9D /* DeclarationDetailViewController.swift */; };
+		7EE67A57253CE34700513D9D /* DeclarationDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE67A56253CE34700513D9D /* DeclarationDetail.storyboard */; };
+		7EE67A68253D6B8600513D9D /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7EE67A67253D6B8600513D9D /* sample.pdf */; };
 		7EF129AA253B1B910057A46E /* CellWithoutBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF129A9253B1B910057A46E /* CellWithoutBackground.swift */; };
 		7EF129B0253B1D030057A46E /* DeclarationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF129AE253B1D030057A46E /* DeclarationTableViewCell.swift */; };
 		7EF129B1253B1D030057A46E /* DeclarationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF129AF253B1D030057A46E /* DeclarationTableViewCell.xib */; };
@@ -39,6 +42,9 @@
 		7EBEE4072539D0C20057582C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7EE67A49253C6D8B00513D9D /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		7EE67A4A253C6D8B00513D9D /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		7EE67A53253CE30A00513D9D /* DeclarationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationDetailViewController.swift; sourceTree = "<group>"; };
+		7EE67A56253CE34700513D9D /* DeclarationDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeclarationDetail.storyboard; sourceTree = "<group>"; };
+		7EE67A67253D6B8600513D9D /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		7EF129A9253B1B910057A46E /* CellWithoutBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithoutBackground.swift; sourceTree = "<group>"; };
 		7EF129AE253B1D030057A46E /* DeclarationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationTableViewCell.swift; sourceTree = "<group>"; };
 		7EF129AF253B1D030057A46E /* DeclarationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeclarationTableViewCell.xib; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				7EF129B8253B1D500057A46E /* Extensions */,
 				7EF129AC253B1B990057A46E /* Source */,
+				7EE67A59253CE37100513D9D /* DeclarationDetail */,
 				7EF129A5253B188A0057A46E /* Declarations */,
 				7EF129A7253B18B90057A46E /* Networking */,
 				7EBEE3DD2539C9B40057582C /* AppDelegate.swift */,
@@ -99,6 +106,7 @@
 				7EBEE3E62539C9B70057582C /* Assets.xcassets */,
 				7EBEE3E82539C9B70057582C /* LaunchScreen.storyboard */,
 				7EBEE3EB2539C9B70057582C /* Info.plist */,
+				7EE67A67253D6B8600513D9D /* sample.pdf */,
 			);
 			path = Nazk;
 			sourceTree = "<group>";
@@ -110,6 +118,15 @@
 				7EE67A4A253C6D8B00513D9D /* EmptyTableViewCell.xib */,
 			);
 			path = EmptyTableViewCell;
+			sourceTree = "<group>";
+		};
+		7EE67A59253CE37100513D9D /* DeclarationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7EE67A53253CE30A00513D9D /* DeclarationDetailViewController.swift */,
+				7EE67A56253CE34700513D9D /* DeclarationDetail.storyboard */,
+			);
+			path = DeclarationDetail;
 			sourceTree = "<group>";
 		};
 		7EF129A5253B188A0057A46E /* Declarations */ = {
@@ -227,9 +244,11 @@
 			files = (
 				7EBEE3EA2539C9B70057582C /* LaunchScreen.storyboard in Resources */,
 				7EE67A4C253C6D8B00513D9D /* EmptyTableViewCell.xib in Resources */,
+				7EE67A57253CE34700513D9D /* DeclarationDetail.storyboard in Resources */,
 				7EBEE3E72539C9B70057582C /* Assets.xcassets in Resources */,
 				7EF129B1253B1D030057A46E /* DeclarationTableViewCell.xib in Resources */,
 				7EBEE4082539D0C20057582C /* Main.storyboard in Resources */,
+				7EE67A68253D6B8600513D9D /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +311,7 @@
 				7EF129B6253B1D4B0057A46E /* NazkTableView.swift in Sources */,
 				7EBEE3E02539C9B40057582C /* SceneDelegate.swift in Sources */,
 				7E5B15092539FCE00072683F /* DeclaraionsModel.swift in Sources */,
+				7EE67A54253CE30A00513D9D /* DeclarationDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

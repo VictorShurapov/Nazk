@@ -59,6 +59,7 @@ private extension DeclarationsViewController {
     
     func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = 103
         tableView.rowHeight = UITableView.automaticDimension
         tableView.registerCell(DeclarationTableViewCell.self)
@@ -128,6 +129,48 @@ extension DeclarationsViewController {
             }
         }
     }
+    
+    //    func loadPdf(withURL path: String) {
+    //        declarationsProvider.request(.loadPDF(url: path)) { result in
+    //            do {
+    //                let response = try result.get()
+    //                print("YOBAR: \(response.data)")
+    //                let decodedResponse = try JSONDecoder().decode(DeclaraionsModel.self, from: response.data)
+    //                DispatchQueue.main.async {
+    //                    self.declarations = decodedResponse.items
+    //                }
+    //            } catch DecodingError.keyNotFound {
+    //                // KeyNotFound decoding error in our case means that
+    //                // nothing was found for our query
+    //                // so we just show tableView with "empty" cell
+    //                DispatchQueue.main.async {
+    //                    self.declarations.removeAll()
+    //                }
+    //            } catch {
+    //                //let printableError = error as CustomStringConvertible
+    //                let responseString = try? result.get().mapString()
+    //                print("ERROR: \(responseString ?? "")")
+    //                self.showAlert("Отримання декларацій", message: "Щось пішло не так, спробуйте ще! :)")
+    //            }
+    //        }
+    //    }
+}
+
+
+// MARK: - UITableViewDelegate
+extension DeclarationsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // let selectedDeclaration = declarations[safe: indexPath.row]
+        //        let testValue = "https://public.nazk.gov.ua/storage/documents/pdf/1/7/d/2/17d26dd6-bca7-4eb4-943c-fbf063a46ffc.pdf"
+        //        loadPdf(withURL: testValue)
+        
+        let declarationDetailStoryboard = UIStoryboard(name: "DeclarationDetail", bundle: Bundle.main)
+        if let viewController = declarationDetailStoryboard.instantiateViewController(identifier: "DeclarationDetailViewController") as? DeclarationDetailViewController {
+            //viewController.pdfURLPath = pdfURLPath
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -173,5 +216,4 @@ extension DeclarationsViewController {
         }
     }
 }
-
 

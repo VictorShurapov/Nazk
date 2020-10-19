@@ -18,6 +18,7 @@ struct InfoOfficial: Codable {
     let lastname: String?
     let placeOfWork: String?
     let firstname: String?
+    var linkPDF: String? = "https://public.nazk.gov.ua/storage/documents/pdf/b/f/f/8/bff8fc4d-6a0e-46c7-b82a-e4fe72c6e833.pdf"
 }
 
 struct MetaData: Codable {

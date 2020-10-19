@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6A-Cc-a1U">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Declaration Detail View Controller-->
+        <scene sceneID="icT-Qm-fTR">
+            <objects>
+                <viewController storyboardIdentifier="DeclarationDetailViewController" id="w6A-Cc-a1U" customClass="DeclarationDetailViewController" customModule="Nazk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OAl-kt-g5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJM-gs-4Zq" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dLZ-8G-O3p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dLZ-8G-O3p" firstAttribute="bottom" secondItem="HJM-gs-4Zq" secondAttribute="bottom" id="6Hs-n5-tms"/>
+                            <constraint firstItem="dLZ-8G-O3p" firstAttribute="trailing" secondItem="HJM-gs-4Zq" secondAttribute="trailing" id="JrL-Sr-Qrn"/>
+                            <constraint firstItem="HJM-gs-4Zq" firstAttribute="top" secondItem="dLZ-8G-O3p" secondAttribute="top" id="fRr-MK-4SM"/>
+                            <constraint firstItem="HJM-gs-4Zq" firstAttribute="leading" secondItem="dLZ-8G-O3p" secondAttribute="leading" id="rnv-TH-frw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pdfView" destination="HJM-gs-4Zq" id="ibD-o3-L6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQh-CT-FBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
